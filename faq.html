@@ -14,7 +14,14 @@
             margin: 0;
             padding: 20px;
         }
-
+/* Estilo para o logo */
+.server-logo {
+    display: block; /* Faz a imagem se comportar como um bloco */
+    margin-left: auto; /* Mágica para centralizar */
+    margin-right: auto; /* Mágica para centralizar */
+    margin-bottom: 20px; /* Espaço entre o logo e o título */
+    max-width: 150px; /* Largura máxima do logo. Ajuste se precisar! */
+}
         /* Container principal que centraliza o conteúdo */
         .faq-container {
             max-width: 800px;
@@ -76,7 +83,8 @@
 </head>
 <body>
 
-    <div class="faq-container">
+    <div class="faq-container"> 
+    <img src="logo.png" alt="Logo do Servidor" class="server-logo">
         <h1>Legend Apostas</h1>
 
         <div class="faq-item">
