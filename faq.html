@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Legend Apostas</title>
+    
+    <style>
+        /* Estilo geral da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212; /* Fundo escuro, tema de jogo */
+            color: #ffffff; /* Texto branco */
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container principal que centraliza o conteúdo */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto; /* Centraliza na página */
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Legend Apostas */ Legend Apostas
+
+        h1 {LEGEND APOSTAS
+            text-align: center;
+            color: #00aaff; /* Uma cor de destaque, como azul neon */
+            margin-bottom: 30px;
+        }
+
+        /* Estilo de cada item da FAQ ( Legend Apostas ) */
+        .faq-item {
+            border-bottom: 1px solid #333;
+            padding: 15px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none; /* Remove a borda do último item */
+        }
+
+        /* A pergunta clicável */
+        .faq-question {
+            font-size: 18px;
+            cursor: pointer; /* Muda o mouse para uma mãozinha, indicando que é clicável */
+            display: flex;
+            justify-content: space-between; /* Coloca o texto de um lado e o '+' do outro */
+            align-items: center;
+            font-weight: bold;
+        }
+        
+        /* O ícone de '+' que vira '-' */
+        .faq-question::after {
+            content: '+'; /* Começa com um sinal de mais */
+            font-size: 24px;
+            transition: transform 0.3s ease; /* Animação suave */
+        }
+
+        /* Estilo da pergunta quando a resposta está visível */
+        .faq-question.active::after {
+            transform: rotate(45deg); /* Gira o '+' para formar um 'x' */
+        }
+
+        /* A resposta, que começa escondida */
+        .faq-answer {
+            max-height: 0; /* Começa com altura zero (escondida) */
+            overflow: hidden; /* Garante que o conteúdo não vaze */
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease; /* Animação suave para aparecer */
+            padding: 0 10px;
+            line-height: 1.6; /* Espaçamento entre as linhas para melhor leitura */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="faq-container">
+        <h1>Legend Apostas</h1>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                LEGEND APOSTAS
+            </div>
+            <div class="faq-answer">
+                <p> Legend Apostas
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                LEGEND APOSTAS
+            </div>
+            <div class="faq-answer">
+                <p>Legend Apostas:</p>
+                <ul>
+                    <li>Legend Apostas.</li>
+                    <li>Legend Apostas.</li>
+                    <li>Legend Apostas.</li>
+                    <li>Legend Apostas.</li>
+                </ul>
+                <p>Legend Apostas.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                LEGEND APOSTAS
+            </div>
+            <div class="faq-answer">
+                <p>LEGEND APOSTAS
+            </div>
+        </div>
+
+        </div>
+
+    <script>
+        // Pega todos os elementos que têm a classe "faq-question"
+        const questions = document.querySelectorAll('.faq-question');
+
+        // Para cada pergunta encontrada, adicione a funcionalidade de clique
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                // Encontra a resposta correspondente (é o próximo elemento irmão)
+                const answer = question.nextElementSibling;
+                
+                // Adiciona ou remove a classe "active" na pergunta (para o ícone mudar)
+                question.classList.toggle('active');
+
+                // Verifica se a resposta já está visível
+                if (answer.style.maxHeight) {
+                    // Se estiver visível (tem altura), esconde
+                    answer.style.maxHeight = null;
+                    answer.style.padding = "0 10px";
+                } else {
+                    // Se estiver escondida, mostra
+                    // Define a altura máxima para o tamanho real do conteúdo + padding
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    answer.style.padding = "15px 10px";
+                } 
+            });
+        });
+    </script>
+
+</body>
+</html>
